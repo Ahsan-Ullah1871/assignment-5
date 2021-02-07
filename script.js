@@ -56,8 +56,8 @@ let displaySearch = data => {
 			newDiv.id = "item";
 			newDiv.innerHTML = itemInformation;
  
-			let box = document.getElementById("searchItems");
-			box.appendChild(newDiv);
+			let searchSection = document.getElementById("searchItems");
+			searchSection.appendChild(newDiv);
 		});
 	}
 };
