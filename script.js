@@ -62,6 +62,7 @@ let displaySearch = data => {
 	}
 };
 
+
 // click Image:
 
 let clickImage = (id) => {
@@ -76,32 +77,57 @@ let clickImage = (id) => {
 
 // Display Details:
 let details = (fullData) => {
+	// full description display on:
 	document.getElementById("full-Description").style.display = "block";
-	const DetailsDiv = document.getElementById("full-Description");
-	 DetailsDiv.innerHTML = `
+
+	// old history off:
+	document.getElementById("IngredientList").innerHTML = ``; 
+
+	const imageAndNameBox = document.getElementById("imageAnd-name");
     
-              <div class="row">
-                  <div class="image col-md-4 "><img src="${fullData.strMealThumb}"></div>
-                  <div class="description col-md-8" id = "description">
-                      <h1>${fullData.strMeal}</h1>
-                      <h3>Ingredient:</h3>
-                      <div class="recipeDetails" id="recipeDetails">
-                          <h5> ${fullData.strMeasure1} ${fullData.strIngredient1}</h5>
-                          <h5>  ${fullData.strMeasure2} ${fullData.strIngredient2}</h5>
-                          <h5>  ${fullData.strMeasure3} ${fullData.strIngredient3}</h5>
-                          <h5>  ${fullData.strMeasure4} ${fullData.strIngredient4}</h5>
-                          <h5>  ${fullData.strMeasure5} ${fullData.strIngredient5}</h5>
-                          <h5>  ${fullData.strMeasure6} ${fullData.strIngredient6}</h5>
-                          <h5>  ${fullData.strMeasure7} ${fullData.strIngredient7}</h5>
-                          <h5>  ${fullData.strMeasure8} ${fullData.strIngredient8}</h5>
-                          <h5>  ${fullData.strMeasure9} ${fullData.strIngredient9}</h5>
-                          <h5>  ${fullData.strMeasure10} ${fullData.strIngredient10}</h5>
- 
-                      </div>
- 
-                  </div>
-              </div>
-    `;
+	imageAndNameBox.innerHTML = `
+	    <h1>${fullData.strMeal}</h1>
+	     <img src="${fullData.strMealThumb}">
+	`;
+
+
+
+
+	let potIngredient = [
+		fullData.strMeasure1 + fullData.strIngredient1,
+		fullData.strMeasure2 + fullData.strIngredient2,
+		fullData.strMeasure3 + fullData.strIngredient3,
+		fullData.strMeasure4 + fullData.strIngredient4,
+		fullData.strMeasure5 + fullData.strIngredient5,
+		fullData.strMeasure6 + fullData.strIngredient6,
+		fullData.strMeasure7 + fullData.strIngredient7,
+		fullData.strMeasure8 + fullData.strIngredient8,
+		fullData.strMeasure9 + fullData.strIngredient9,
+		fullData.strMeasure10 + fullData.strIngredient10,
+		fullData.strMeasure11 + fullData.strIngredient11,
+		fullData.strMeasure12 + fullData.strIngredient12,
+		fullData.strMeasure13 + fullData.strIngredient13,
+		fullData.strMeasure14 + fullData.strIngredient14,
+		fullData.strMeasure15 + fullData.strIngredient15,
+		fullData.strMeasure16 + fullData.strIngredient16,
+		fullData.strMeasure17 + fullData.strIngredient17,
+		fullData.strMeasure18 + fullData.strIngredient18,
+		fullData.strMeasure19 + fullData.strIngredient19,
+		fullData.strMeasure20 + fullData.strIngredient20,
+	];
+
+
+	potIngredient.forEach(element => {
+		if (element != 0 && element != null) {
+			const IngredientList = document.getElementById("IngredientList");
+
+			const makeLI =  document.createElement("li");
+			makeLI.innerHTML = ` ${element} `;
+			IngredientList.appendChild(makeLI);
+		}
+	});
 
 
  };
+
+

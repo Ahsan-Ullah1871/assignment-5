@@ -22,7 +22,7 @@
 
 <body>
 
-<!-- header -->
+    <!-- header -->
     <header class="container">
         <main class="  d-flex  align-items-center justify-content-between">
             <div>
@@ -40,19 +40,28 @@
             <nav class="  navbar-light bg-denger">
                 <div class=" container-fluid justify-content-center">
                     <section class="d-flex justify-content-center">
-                        <input id="searchBox" class="  me-2" type="search" name="" placeholder="Search" aria-label="Search">
+                        <input id="searchBox" class="  me-2" type="search" name="" placeholder="Search"
+                            aria-label="Search">
                         <button onclick="clickSearch()" class="btn btn-outline-success" type="submit">Search</button>
                     </section>
                 </div>
             </nav>
         </section>
-            <!-- full details display part -->
-            <section  id="detailsSection">
-                <div class="full-Description mt-4" id="full-Description">
-        
+        <!-- full details display part -->
+        <section class="full-Description " id="full-Description">
+            <div class="row ">
+                <div class="col-5 imageAnd-name text-center" id="imageAnd-name">
+
                 </div>
-        
-            </section>
+                <div class="col-7  Ingredient">
+                    <h3>Ingredient:</h3>
+                    <ul id="IngredientList">
+
+                    </ul>
+                </div>
+            </div>
+
+        </section>
     </header>
 
     <!-- warning message  part: -->

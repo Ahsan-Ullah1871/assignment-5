@@ -57,22 +57,31 @@ header{
     padding: 40px;
     margin: 0 auto;
     display:none;
-
-  overflow: auto;
-  
+    overflow: scroll;
+   
 }
-.image img{
-    width: 100%;
-    border-radius: 30px;
+.imageAnd-name img{
+    width: 70%;
+     border-radius: 30px;
  }
-.description h1{
+.imageAnd-name h1{
     text-align: center;
     font-family: 'Merriweather', serif;
+    
 
 }
- .description h5{
-     font-family: 'Texturina', serif;
-     margin-left:50px ;
+
+ .Ingredient h3{
+     width: 40%;
+     margin-left: 70px;
+    font-family: 'Merriweather', serif;
+
+ }
+ .Ingredient li{
+   width: 60%;
+    margin-left: 80px;
+    margin-top: 10px;
+    font-family: 'Texturina', serif;
  }
  /*  */
  #warning1{
